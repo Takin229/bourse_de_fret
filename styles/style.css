@@ -24,24 +24,24 @@ header h1 {
     margin: 0 auto;
 }
 
-.dropdown-menu {
+.horizontal-navigation {
     position: absolute;
     top: 10px;
     right: 20px;
 }
 
-.dropdown-menu ul {
+.horizontal-navigation ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.dropdown-menu li {
+.horizontal-navigation li {
     display: inline-block;
     margin-right: 20px;
 }
 
-.dropdown-menu li a {
+.horizontal-navigation li a {
     text-decoration: none;
     color: #fff;
 }
@@ -49,12 +49,35 @@ header h1 {
 .vehicle-images {
     background-color: #fff;
     padding: 50px 20px;
+    overflow: hidden;
 }
 
 .image-slider {
     /* Ajoutez ici le style pour les images déroulantes */
+    display: flex; /* Utiliser flexbox pour disposer les images côte à côte */
+    transition: transform 0.5s ease; /* Ajouter une transition fluide pour l'effet de défilement */
+
     /* Vous aurez besoin de JavaScript pour gérer le défilement */
 }
+
+/* Styles pour le conteneur des images "image-slider" */
+.image-slider {
+    display: flex; /* Utiliser flexbox pour disposer les images côte à côte */
+    transition: transform 0.5s ease; /* Ajouter une transition fluide pour l'effet de défilement */
+}
+
+/* Styles pour chaque image */
+.image-slider img {
+    width: 300px; /* Ajuster la largeur de l'image selon vos besoins */
+    height: auto; /* Ajuster la hauteur automatiquement pour garder les proportions */
+    margin-right: 20px; /* Marge entre chaque image */
+}
+
+/* Ajouter une classe "active" pour la première image visible (utilisée avec JavaScript) */
+.image-slider img.active {
+    border: 2px solid #0C823D; /* Ajouter une bordure pour mettre en évidence l'image active */
+}
+
 
 footer {
     background-color: #0C823D;
